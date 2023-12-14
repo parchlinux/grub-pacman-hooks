@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Type = Package
+Target = grub
+[Action]
+Description = Reinstall and remake GRUB configuration
+When = PostTransaction
+Exec = /bin/bash -c '/etc/pacman.d/hooks/90-grub-disk-type.sh'
